@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --bg-color: #f2f2f2;
+  --primary-color: #263138;
+  --secondary-color: #445964;
+}
+*,
+p,
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-color);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bg-color);
+}
+/* NAVBAR */
+nav {
+  background-color: var(--bg-color);
+}
+nav #logo img {
+  height: 25px;
+}
+nav ul li .nav-link {
+  color: var(--primary-color);
+}
+/* MAIN */
+main {
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+main .name {
+  font-weight: bold;
+  transform: color 0.4s ease;
+}
+main .intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-wrap: nowrap;
+}
+main .intro p {
+  margin-bottom: 15px;
+}
+main .intro .resume {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  gap: 10px;
+  border: none;
+  transition: background-color 0.15s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .intro .resume:hover,
+#contact form button:hover {
+  background-color: var(--secondary-color);
+}
+main .intro a {
+  text-decoration: none;
+}
+main .intro .resume img {
+  width: 25px;
+}
+/* REUSED CODES */
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+.social-links img {
+  width: 25px;
+}
+.title {
+  font-weight: 600;
+}
+main .background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+/* TECHNOLOGIES */
+#technologies {
+  height: auto;
+  padding: 50px;
+  margin-bottom: 10px;
+}
+main h1,
+#technologies h3,
+#projects h3 {
+  margin-bottom: 15px;
+}
+#technologies,
+#projects,
+#contact,
+#technologies .current-techs,
+#technologies .learning-techs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#technologies .current-techs > p {
+  margin-bottom: 20px;
+}
+#technologies .learning-techs > p {
+  margin: 25px 0 5px 0;
+}
+#technologies .current-techs p,
+#technologies .learning-techs p {
+  text-wrap: nowrap;
+}
+#technologies .current-techs .images,
+#technologies .learning-techs .images {
+  display: grid;
+  gap: 15px;
+}
+#technologies .current-techs .images {
+  grid-template-columns: repeat(9, 1fr);
+}
+#technologies .learning-techs .images {
+  grid-template-columns: 1fr;
+}
+#technologies .current-techs img,
+#technologies .learning-techs img {
+  width: 80px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+/* PROJECTS */
+#projects {
+  height: auto;
+  padding: 20px 50px;
+  margin-bottom: 10px;
+}
+#projects .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+#projects a {
+  text-decoration: none;
+}
+#projects a .software {
+  aspect-ratio: 5/3;
+  object-fit: cover;
+  object-position: top center;
+}
+#projects .card {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  box-shadow: 0 8px 10px 0 rgba(38, 49, 56, 0.305);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: box-shadow 0.4s ease;
+}
+#projects .card:hover {
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+#projects .card:hover .card-main .card-title {
+  text-decoration: underline;
+}
+#projects .card:hover .card-main img {
+  -webkit-animation: slide-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+#projects .card .card-body .card-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#projects .card .card-body .card-main .card-title {
+  font-size: 1.1rem;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#projects .card .card-body .card-main img {
+  width: 25px;
+}
+#projects .card .card-body .card-text {
+  font-weight: 350;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* CONTACT */
+#contact {
+  padding: 50px;
+}
+#contact .contact-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+#contact .contact-container .note {
+  display: flex;
+  flex-direction: column;
+}
+#contact form label {
+  display: block;
+  font-size: 0.9rem;
+  font-stretch: condensed;
+}
+#contact form input {
+  height: 40px;
+}
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+}
+#contact form textarea {
+  min-height: 50px;
+}
+#contact form button {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: flex;
+  transition: background-color 0.15s ease;
+  border: none;
+}
+#contact .contact-footer,
+#contact .contact-footer .email-address,
+#contact .contact-footer button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#contact .contact-footer .email-address {
+  font-size: 0.9rem;
+}
+#contact .contact-footer img {
+  width: 25px;
+}
+/* FOOTER */
+footer {
+  background-color: var(--primary-color);
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 0 50px;
+  gap: 50px;
+}
+footer .container .copyright {
+  color: var(--bg-color);
+}
+footer .container .footer-img {
+  margin-top: 0;
+}
+footer .container ul li img {
+  width: 20px !important;
+}
+/* MEDIA QUERIES */
+@media (max-width: 992px) {
+  #technologies .current-techs .images {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  /* MAIN */
+  main {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  main .row {
+    flex-direction: column-reverse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+  main .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-wrap: pretty;
+  }
+  /* TECHNOLOGIES */
+  #technologies .current-techs .images {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  /* PROJECTS */
+  #projects .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* CONTACT */
+  #contact .contact-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  #contact .contact-container .note {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  #contact form input,
+  #contact form textarea {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  /* MAIN */
+  main {
+    margin-top: 20px;
+  }
+  /* TECHNOLOGIES */
+  #technologies .current-techs .images {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* PROJECTS */
+  #projects .grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+  /* CONTACT */
+  #contact .contact-footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+  /* FOOTER */
+  footer .container .footer-img {
+    gap: 15px;
+  }
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2024-2-20 18:11:20
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-tr
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-tr {
+  0% {
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px) translateX(100px);
+    transform: translateY(-100px) translateX(100px);
+  }
+}
+@keyframes slide-tr {
+  0% {
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px) translateX(100px);
+    transform: translateY(-5px) translateX(5px);
+  }
+}
