@@ -50,30 +50,11 @@ main .intro {
 main .intro p {
   margin-bottom: 15px;
 }
-main .intro .resume {
-  background-color: var(--primary-color);
-  color: white;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 15px;
-  gap: 10px;
-  border: none;
-  transition: background-color 0.15s ease;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-main .intro .resume:hover,
 #contact form button:hover {
   background-color: var(--secondary-color);
 }
 main .intro a {
   text-decoration: none;
-}
-main .intro .resume img {
-  width: 25px;
 }
 /* REUSED CODES */
 .social-links {
