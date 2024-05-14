@@ -69,7 +69,7 @@ main .intro a {
 }
 .social-links img,
 #projects .card .card-body .card-below img {
-  width: 25px;
+  width: 25px !important;
 }
 .title {
   font-weight: 600;
