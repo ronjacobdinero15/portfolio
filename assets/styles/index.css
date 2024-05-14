@@ -67,7 +67,8 @@ main .intro a {
   gap: 30px;
   margin-top: 20px;
 }
-.social-links img {
+.social-links img,
+#projects .card .card-body .card-below img {
   width: 25px;
 }
 .title {
@@ -164,10 +165,17 @@ main h1,
   -webkit-animation: slide-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-#projects .card .card-body .card-main {
+#projects .card .card-body .card-main,
+#projects .card .card-body .card-below {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+#projects .card .card-body .card-below img {
+  transition: scale 0.15s ease;
+}
+#projects .card .card-body .card-below img:hover {
+  scale: 1.1;
 }
 #projects .card .card-body .card-main .card-title {
   font-size: 1.1rem;
