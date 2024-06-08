@@ -68,9 +68,8 @@ main .intro a {
   margin-top: 20px;
 }
 .social-links img,
-#projects .card .card-body .card-below img,
-.github_icon {
-  width: 25px !important;
+#projects .card .card-body .card-below img {
+  width: 25px;
 }
 .title {
   font-weight: 600;
